@@ -1,0 +1,40 @@
+/* =branding
+----------------------------------------------- */
+h1#branding {
+	padding:.7em 1em;
+	margin-bottom:0;
+	font-weight:normal;
+	font-size:1.75em;
+	text-align:left;
+  font-family: Base9_SmallCaps;
+  letter-spacing: .08em;
+}
+
+h1#branding a {
+	font-size:1.5em;
+  font-family: Base9_SmallCaps;
+  letter-spacing: .08em;
+  /*display: table-cell;
+  vertical-align: middle;*/
+}
+
+#logo img {
+	padding:.7em 1em;
+  vertical-align:middle;
+  padding-right: 1.5em;
+  height: 4.50em;
+}
+
+#masthead {
+	padding-top:.7em;
+  height: 6em;
+}
+
+
+span#janux {
+  padding-right: .2em;
+}
+
+#sidebar {
+  background-color: #ccc
+}

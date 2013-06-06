@@ -1,0 +1,55 @@
+@import 'css/reset.css';
+@import 'css/font.css';
+@import 'css/color.css';
+@import 'css/style.css';
+@import './grid.less';
+
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+
+////////////
+// LAYOUT //
+////////////
+
+// header
+header#top {
+	margin-bottom: 1em;
+}
+
+#logo {
+  .column(2);
+  .push(1);
+}
+
+
+#masthead {
+  .column(9);
+}
+
+// main column & sidebar
+#maincolumn {
+	.column(9);
+}
+
+#sidebar {
+	.column(3);
+}
+
+@media screen and (max-width: 380px) {
+	#maincolumn,
+	#sidebar {
+		.column(12);
+		margin-bottom: 1em;
+	}
+}

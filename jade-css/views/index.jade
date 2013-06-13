@@ -17,34 +17,45 @@ html
 
       section#sidebar
         p
-          a What is Janux?
+          a(href="#what-is-janux") What is Janux?
         p
-          a Janux People
+          a(href="#janux-people") Janux People
         p
-          a Janux Authorization
+          a(href="#janux-authorization") Janux Authorization
         p 
-          a Roadmap
+          a(href="#roadmap") Roadmap
 
 
       #maincolumn
-        p 
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
-          write a bunch of text here until I am blue in the face, and keep writing because there is a
-          lot to write.
+        h2
+          a(id='what-is-janux') What is Janux?
+
+        p Janux is an open source integration tool that aims to make it easy to interconnect disparate software systems into a single logical application. One of our core beliefs is that business problems tend to change at a much smaller pace than the technology du-jour, and that we should thus focus on describing the solutions to these problems elegantly so that they can be re-used in a variety of contexts, languages and platforms.
+
+        p Thus, while our initial implementation is java-based, the goal of the project is to provide a set of models and service facades that are language-agnostic, and that can interoperate with applications written in other languages via web services or other messaging mechanisms.
+        p In its initial implementation it provides a set of web services to create, store and search entities representing person and organizations (see <a href="#janux-people">Janux People</a>), as well as provide a flexible permission-based scheme for authorizing the user accounts that may be associated with specific persons (see <a href="#janux-authorization">Janux Authorization</a>).
+
+        p Janux currently takes the form of:
+          ul
+            li A set of abstract object models and service facades that model Party, Person and Organization entities and related entities such as Postal Addresses and other Contact Methods.  These models and services aim to represent commonly used business objects in a generic way, so that they can be used to integrate to a variety of use cases.
+
+            li A set of object models and services that model Permissions, Roles and Accounts that can be used to create flexible and extensible authorization permission-based schemes to control access to business services, or to vary the User Interface according to the Permissions held by an authenticated User.
+
+            li A high quality, scaleable, lightweight yet robust java/spring/hibernate implementation java/spring/hibernate of these models, that is exposed via web services.  The implementation is database agnostic, and currently uses mysql as the datastore.  While a relational database is quite sufficient to model these entities, we are also planning to integrate a NoSql database that is better suited to represent less structured data, such as a User's Profile, for example, which may vary widely according to the context in which it is used.
 
 
+        h2
+          a(id="janux-people") Janux People
+
+        p <a href="api/biz/janux/people/package-summary.html#package_description" target="_new">High-level design of biz.janux.people package</a>
+          
+
+        h2
+          a(id="janux-authorization") Janux Authorization
+
+        p <a href="api/org/janux/bus/security/package-summary.html#package_description" target="_new">High-level design of org.janux.pub.security package</a>
+
+        h2
+          a(id="roadmap") Roadmap
+
+// vim: set fo=rq wrap:
